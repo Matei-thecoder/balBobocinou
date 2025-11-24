@@ -39,7 +39,7 @@ run().catch(console.dir);
 
 app.set("trust proxy", true);
 
-app.get("/vote",async (req, res) => {
+app.post("/vote",async (req, res) => {
     const ip = req.ip;
     const vote = req.body.vote;
 
@@ -81,6 +81,4 @@ if (require.main === module) {
 }
 
 module.exports = app;
-
-
 
